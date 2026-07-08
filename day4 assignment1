@@ -1,0 +1,642 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "authorship_tag": "ABX9TyNAc9kwukT9O9LnTANheKZr",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/sk9824708848-bot/dsml-11/blob/main/day4%20assignment1\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "text = \"Hello world\"\n",
+        "print(text.lower())\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "7k4P9qV-unOG",
+        "outputId": "5517cad0-37b6-41e2-b675-f78b5cbd9386"
+      },
+      "execution_count": 5,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "hello world\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "text = \"Hello world\"\n",
+        "print(text.upper())"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "fbvJWPjjvc1E",
+        "outputId": "bddce101-b67f-4a4b-9c89-72d61277e13c"
+      },
+      "execution_count": 7,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "HELLO WORLD\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "text = \"hello WORLD\"\n",
+        "print(text.capitalize())"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "Wr1fN55iv22b",
+        "outputId": "ae7725fd-b5ab-494a-b842-4dcf1edb1733"
+      },
+      "execution_count": 11,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Hello world\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "text = \"hello World from my class\"\n",
+        "print(text.title())"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "V_36TLwswaNB",
+        "outputId": "8e305ba8-33f7-47c2-9756-7099ccbf9d31"
+      },
+      "execution_count": 13,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Hello World From My Class\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "text = \"   hello class   \"\n",
+        "print(\"Before strip: '\" + text + \"'\")\n",
+        "print(\"After strip: '\" + text.strip() + \"'\")"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "OqeDyLH6xDAg",
+        "outputId": "58f89cfc-71fb-4d25-d449-98fd0c95b1b7"
+      },
+      "execution_count": 15,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Before strip: '   hello class   '\n",
+            "After strip: 'hello class'\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "text = \"   hello sunil   \"\n",
+        "print(\"'\" + text.lstrip()+ \"'\")"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "WaZHQfnFya6p",
+        "outputId": "ca731117-7670-4900-a3dd-62cd268ec735"
+      },
+      "execution_count": 17,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "'hello sunil   '\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "text = \"    Hello sunil    \"\n",
+        "print(\"'\" + text.rstrip() + \"'\")"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "ggx5s0PVywH0",
+        "outputId": "036a06be-2c26-4efb-df11-52d0e49911c3"
+      },
+      "execution_count": 19,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "'    Hello sunil'\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "text = \" I like mango, Mango is tasty.\"\n",
+        "print(\":\", text)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "7Qqp_fyYzL2n",
+        "outputId": "13761d31-e4ad-4290-9464-96f9b30e95e9"
+      },
+      "execution_count": 21,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            ":  I like mango, Mango is tasty.\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "text = \" I like mango, Mango is tasty.\"\n",
+        "print(\":\", text.replace(\"mango\", \"apple\"))"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "uvPEv8R3z7Q2",
+        "outputId": "70faefd1-fe4c-420c-c33c-c982bf377d15"
+      },
+      "execution_count": 23,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            ":  I like apple, Mango is tasty.\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "data = \"apple, banana, orange\"\n",
+        "print(data.split(\"'\"))"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "uCqitWDl0NhT",
+        "outputId": "579472ce-46fc-4a27-b03d-0e891d1cfc1a"
+      },
+      "execution_count": 25,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "['apple, banana, orange']\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "data = [ \"I\", \"love\", \"coding\", \"in\", \"python\"]\n",
+        "print(\" \".join(data))\n",
+        "print(\"_\".join(data))\n",
+        "print(\",\".join(data))"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "vrmnmXzb2SWC",
+        "outputId": "248e27b6-3077-494b-c6bf-14d37637dfc9"
+      },
+      "execution_count": 28,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "I love coding in python\n",
+            "I_love_coding_in_python\n",
+            "I,love,coding,in,python\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "data = \"I love coding in pandas\"\n",
+        "print(data.find(\"coding\"))\n",
+        "print(data.find(\"python\"))"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "GelajyJS5hTO",
+        "outputId": "3b7bc9ed-407b-4c3f-c97b-1d7e51b97469"
+      },
+      "execution_count": 30,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "7\n",
+            "-1\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "data = \"I love coding. Coding is fun. I love coding in pandas.\"\n",
+        "print(data.count(\"coding\")) #(C count hudai na kina ki case-sensitive hunxa)\n",
+        "print(data.count(\"love\"))\n",
+        "print(data.count(\"pandas\"))"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "No8ONw3G6bq0",
+        "outputId": "c3a57065-82c6-43a5-f918-9d4ffc3fb5b1"
+      },
+      "execution_count": 32,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "2\n",
+            "2\n",
+            "1\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "data = \"I love learining new thing\"\n",
+        "print(data.startswith(\"I love\"))\n",
+        "\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "8zHbJhd-8YAB",
+        "outputId": "1933d745-a755-4441-ba8c-9d769ba11454"
+      },
+      "execution_count": 36,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "True\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "data = \"I love learining new thing\"\n",
+        "print(data.startswith(\"love\"))"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "fywfJkuq9qhg",
+        "outputId": "33d5061a-cccf-4e1e-deef-0268b1a9cf5e"
+      },
+      "execution_count": 40,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "False\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "data = \"I love coding python\"\n",
+        "print(data.endswith(\"python\"))"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "d-R2jGEv95aN",
+        "outputId": "43e04185-5653-4489-c341-edf828680cb5"
+      },
+      "execution_count": 42,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "True\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "data = \"I love coding python\"\n",
+        "print(data.endswith(\"love\"))"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "A8mfCfWm-Q9A",
+        "outputId": "86dcb739-201e-48ee-9cdf-05d40b922ce2"
+      },
+      "execution_count": 44,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "False\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "data1 = \"Sunil123\"\n",
+        "data2 = \"Sunil 123\"\n",
+        "data3 = \"Sunil#123\"\n",
+        "print(data1.isalnum())\n",
+        "print(data2.isalnum())   #alnumber\n",
+        "print(data3.isalnum())"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "GjRTait7-b17",
+        "outputId": "6e2929e5-dabb-4dd0-97fd-29da86a0fc8d"
+      },
+      "execution_count": 47,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "True\n",
+            "False\n",
+            "False\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "data1 = \"Sunil\"\n",
+        "data2 = \"Sunil12\"\n",
+        "data3 = \"Sunil Kumar\"\n",
+        "print(data1.isalpha())\n",
+        "print(data2.isalpha())  # baki data2\\3 ma number ra space vaya ra false aako\n",
+        "print(data3.isalpha())"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "0sUMWr07_ZZ0",
+        "outputId": "af20243d-9f9b-4f2d-e0ce-bc8b549d72eb"
+      },
+      "execution_count": 49,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "True\n",
+            "False\n",
+            "False\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "data1 = \"1223abc\"\n",
+        "data2 = \"12345\"\n",
+        "data3 = \"123 567\"\n",
+        "print(data1.isdigit())\n",
+        "print(data2.isdigit())   #digitcase\n",
+        "print(data3.isdigit())\n",
+        "#data1\\3 kina false vayo vanai kina ki tesma capital letter ra space vanai ko vayai ra"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "V70czEuRATlY",
+        "outputId": "3b2cbbdc-9971-4e83-932f-d0d1f1c784c6"
+      },
+      "execution_count": 51,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "False\n",
+            "True\n",
+            "False\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "data1 = \"   \"\n",
+        "data2 = \"Hello\"\n",
+        "data3 = \"\\s\\n\"\n",
+        "print(data1.isspace())\n",
+        "print(data2.isspace())    #spacecaes\n",
+        "print(data3.isspace())"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "2CUhQrjrDC3f",
+        "outputId": "dd3feadc-f6cb-44e3-f9bb-639672972daf"
+      },
+      "execution_count": 53,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "True\n",
+            "False\n",
+            "False\n"
+          ]
+        },
+        {
+          "output_type": "stream",
+          "name": "stderr",
+          "text": [
+            "<>:3: SyntaxWarning: invalid escape sequence '\\s'\n",
+            "<>:3: SyntaxWarning: invalid escape sequence '\\s'\n",
+            "/tmp/ipykernel_1657/164758231.py:3: SyntaxWarning: invalid escape sequence '\\s'\n",
+            "  data3 = \"\\s\\n\"\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "data1 = \" hello sunil\"\n",
+        "data2 = \" Hello Sunil\"\n",
+        "data3 = \" hello1\"\n",
+        "print(data1.islower())  #lowercase\n",
+        "print(data2.islower())\n",
+        "print(data3.islower())"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "3Ydcbr9dDt2F",
+        "outputId": "b3c8075a-8c0e-4329-c5ba-07fbb0800452"
+      },
+      "execution_count": 55,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "True\n",
+            "False\n",
+            "True\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "data1 = \"HELLO SUNIL\"\n",
+        "data2 = \"HELLO sunil\"\n",
+        "data3 = \"Hello 0\"\n",
+        "print(data1.isupper())\n",
+        "print(data2.isupper())    #uppercase\n",
+        "print(data3.isupper())"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "xTOo_I9nEP9x",
+        "outputId": "01f4f913-efd8-46a1-adfd-3ee5bbfd0f0b"
+      },
+      "execution_count": 56,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "True\n",
+            "False\n",
+            "False\n"
+          ]
+        }
+      ]
+    }
+  ]
+}
